@@ -1,0 +1,9 @@
+product_id,sku,product_name,product_type,unit_price_zar
+101,EXAMPLE-OAK-TBL,EXAMPLE Oak Coffee Table,tables,2499
+102,EXAMPLE-VLV-CHR,EXAMPLE Velvet Accent Chair,chairs,3199
+103,EXAMPLE-RTN-PND,EXAMPLE Rattan Pendant Light,lighting,899
+104,EXAMPLE-MRB-SDT,EXAMPLE Marble Side Table,tables,1799
+105,EXAMPLE-LIN-SOF,EXAMPLE Linen 3-Seater Sofa,sofas,8999
+106,EXAMPLE-JUT-RUG,EXAMPLE Jute Area Rug,decor,1299
+107,EXAMPLE-WAL-MIR,EXAMPLE Arched Wall Mirror,decor,1499
+108,EXAMPLE-TEK-BNC,EXAMPLE Teak Bench,chairs,2299

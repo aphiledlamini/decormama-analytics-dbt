@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: stg_orders
+    description: Cleaned Shopify-style orders (EXAMPLE data).
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: financial_status
+        tests:
+          - accepted_values:
+              arguments: {values: ['paid', 'refunded', 'pending']}
+      - name: channel_id
+        tests:
+          - relationships:
+              arguments: {to: ref('stg_channels'), field: channel_id}
+  - name: stg_order_lines
+    columns:
+      - name: line_id
+        tests: [unique, not_null]
+      - name: order_id
+        tests:
+          - relationships:
+              arguments: {to: ref('stg_orders'), field: order_id}
+      - name: product_id
+        tests:
+          - relationships:
+              arguments: {to: ref('stg_products'), field: product_id}
+  - name: stg_products
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: sku
+        tests: [unique, not_null]
+  - name: stg_channels
+    columns:
+      - name: channel_id
+        tests: [unique, not_null]

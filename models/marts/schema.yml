@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: fct_order_lines
+    description: One row per paid order line.
+    columns:
+      - name: line_id
+        tests: [unique, not_null]
+  - name: mart_sales_by_channel
+    description: Orders, units and revenue per channel per month.
+    columns:
+      - name: channel_name
+        tests: [not_null]
+  - name: mart_product_performance
+    description: Lifetime product performance with revenue rank.
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+  - name: mart_monthly_kpis
+    description: Monthly orders, customers, revenue, AOV and month-on-month growth.
+    columns:
+      - name: order_month
+        tests: [unique, not_null]

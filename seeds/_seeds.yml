@@ -1,0 +1,10 @@
+version: 2
+seeds:
+  - name: raw_orders
+    description: "EXAMPLE DATA ONLY. Synthetic Shopify-style orders; not real Decor Mama figures."
+  - name: raw_order_lines
+    description: "EXAMPLE DATA ONLY. Synthetic order line items."
+  - name: raw_products
+    description: "EXAMPLE DATA ONLY. Synthetic products (names prefixed EXAMPLE)."
+  - name: raw_channels
+    description: "Sales channel reference list (names only, no figures)."

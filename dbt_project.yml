@@ -1,0 +1,20 @@
+name: decormama_analytics
+version: "1.0.0"
+config-version: 2
+profile: decormama_analytics
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+vars:
+  vat_rate: 0.15
+seeds:
+  decormama_analytics:
+    +schema: raw
+models:
+  decormama_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

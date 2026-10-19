@@ -1,0 +1,19 @@
+decormama_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: decormama_analytics.duckdb
+      threads: 4
+    # Oracle target: pip install dbt-oracle, set env vars, run with --target oracle
+    oracle:
+      type: oracle
+      user: "{{ env_var('DBT_ORACLE_USER', 'DBT_DEV') }}"
+      pass: "{{ env_var('DBT_ORACLE_PASSWORD', 'changeme') }}"
+      protocol: tcp
+      host: "{{ env_var('DBT_ORACLE_HOST', 'localhost') }}"
+      port: 1521
+      service: "{{ env_var('DBT_ORACLE_SERVICE', 'XEPDB1') }}"
+      database: "{{ env_var('DBT_ORACLE_SERVICE', 'XEPDB1') }}"
+      schema: "{{ env_var('DBT_ORACLE_USER', 'DBT_DEV') }}"
+      threads: 4
